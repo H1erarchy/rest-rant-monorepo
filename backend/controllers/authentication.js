@@ -6,6 +6,12 @@ const jwt = require('json-web-token')
 const { User } = db
 
   
+router.get('/profile', async (req, res) => {
+    res.json(req.currentUser)
+})
+
+
+  
   
 router.post('/', async (req, res) => {
     
